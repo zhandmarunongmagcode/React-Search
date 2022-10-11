@@ -38,6 +38,12 @@ function App() {
               return userObj
             } else if (userObj.name.last.toLowerCase().includes(searchTerm.toLowerCase())) {
               return userObj
+            } else if (userObj.email.toLowerCase().includes(searchTerm.toLowerCase())) {
+              return userObj
+            } else if (userObj.location.city.toLowerCase().includes(searchTerm.toLowerCase())) {
+              return userObj
+            } else if (userObj.location.country.toLowerCase().includes(searchTerm.toLowerCase())) {
+              return userObj
             }
             }).map(userObj => (
               <div className="cards">
